@@ -62,7 +62,8 @@ resetBtn.addEventListener("click", function () {
   player2Title.style.color = "#123456";
   title.textContent = "Table Tennis";
   gameFinish = select.value
-  audio.pause()
+  audio.pause();
+  audio.currentTime = 0;
   randomImage();
   player1score = 0;
   player2score = 0;
