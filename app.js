@@ -14,13 +14,10 @@ let gameOver = false;
 let playerSelect = 4;
 let audio = new Audio("audio/clap.wav");
 
-
-function userSelect() {
+select.addEventListener('change' , function() {
   gameFinish = select.value
-  console.log(gameFinish);
-}
-userSelect()
-
+  randomImage()
+})
 
 function randomImage() {
   let random = Math.trunc(Math.random() * 5 + 1);
@@ -64,10 +61,10 @@ resetBtn.addEventListener("click", function () {
   player1Title.style.color = "#123456";
   player2Title.style.color = "#123456";
   title.textContent = "Table Tennis";
-  audio.pause();
+  gameFinish = select.value
+  audio.pause()
   randomImage();
   player1score = 0;
   player2score = 0;
-  gameFinish = 5;
   gameOver = false;
 });
